@@ -6,6 +6,28 @@ movie_dict = {"years":years, "durations":durations}
 #2. Creating a DF from a dictionary
 import pandas as pd
 durations_df = pd.DataFrame.from_dict(data = movie_dict)
-print(durations_df)
 
 #3. A visual inspection 
+import matplotlib.pyplot as plt
+fig = plt.figure()
+plt.plot(years, durations)
+plt.title("Netflix Movie Durations 2011-2020")
+plt.show()
+
+#4. Loading the rest of the data from a CSV
+netflix_df = pd.read_csv("datasets/netflix_data.csv")
+netflix_df.head(5)
+
+#5. Filtering the movies
+netflix_df_movies_only = netflix_df[netflix_df["type"]=="Movie"]
+netflix_movies_col_subset = pd.DataFrame(data = netflix_df_movies_only, 
+                                         columns = ["title","country", "genre", "release_year", "duration"])
+netflix_movies_col_subset.head(5)
+
+#6. Creating a scatterplot
+fig = plt.figure(figsize=(12,8))
+plt.scatter(netflix_movies_col_subset["release_year"], netflix_movies_col_subset["duration"])
+plt.title("Movie Duration by Year of Release")
+plt.show()
+
+#7. Digging deeper
