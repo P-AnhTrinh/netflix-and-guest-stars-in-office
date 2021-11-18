@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 fig = plt.figure()
 plt.plot(years, durations)
 plt.title("Netflix Movie Durations 2011-2020")
+plt.xlabel("Years")
+plt.ylabel("Durations")
 plt.show()
 
 #4. Loading the rest of the data from a CSV
@@ -28,6 +30,8 @@ netflix_movies_col_subset.head(5)
 fig = plt.figure(figsize=(12,8))
 plt.scatter(netflix_movies_col_subset["release_year"], netflix_movies_col_subset["duration"])
 plt.title("Movie Duration by Year of Release")
+plt.xlabel("Release Year")
+plt.ylabel("Duration")
 plt.show()
 
 #7. Digging deeper
