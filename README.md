@@ -1,6 +1,6 @@
 # netflix-and-guest-stars-in-office
 
-### Set up Python's virtual environment
+### Set up Python's virtual environment (Windows)
 ```
 py -m venv /path/to/virtual/environment/inside/the/project
 ```
