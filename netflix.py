@@ -31,3 +31,30 @@ plt.title("Movie Duration by Year of Release")
 plt.show()
 
 #7. Digging deeper
+short_movies = netflix_movies_col_subset[netflix_movies_col_subset["duration"]<60]
+short_movies.head(20)
+
+#8. Marking non-feature films
+colors = []
+
+for index, row in netflix_movies_col_subset.iterrows():
+    if row['genre'] == "Children":
+        colors.append("red")
+    elif row['genre'] == "Documentaries":
+        colors.append("blue")
+    elif row['genre'] == "Stand-up":
+        colors.append("green")
+    else:
+        colors.append("black")
+
+#9. Plotting with color
+plt.style.use('fivethirtyeight')
+fig = plt.figure(figsize=(12,8))
+
+plt.scatter(netflix_movies_col_subset["release_year"], netflix_movies_col_subset["duration"], color = colors)
+
+plt.title("Movie duration by year of release")
+plt.xlabel("Release year")
+plt.ylabel("Duration (min)")
+
+plt.show()
