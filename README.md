@@ -1,22 +1,29 @@
 # netflix-and-guest-stars-in-office
+## Table of Contents
+- [Installation](#installation)
+- [Introduction](#introduction)
+- [Netflix's movies are getting shorter over time?](📺-Netflix's-movies-are-getting-shorter-over-time?)
 
-### Set up Python's virtual environment (Windows)
+
+## Installation
+- Set up Python's virtual environment (Windows)
 ```
 py -m venv /path/to/virtual/environment/inside/the/project
 ```
 
-### Install Pandas and Matplotlib
+- Install Pandas and Matplotlib
 ```
 py -m pip install pandas
 py -m pip install matplotlib
 ```
 
-### Save all the packages in the text file requirements.txt
+- Save all the packages in the text file requirements.txt
 ```
 creat requirements.txt inside the project
 pip freeze > requirements.txt
 ```
 
+## Introduction
 In this project, I will solve a real-world data science problem. 
 I will use everything from lists and loops to pandas and matplotlib to discover if Netflix's movies are getting shorter over time 
 and which guest stars appear in the most popular episode of "The Office"
