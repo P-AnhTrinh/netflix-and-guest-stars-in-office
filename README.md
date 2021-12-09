@@ -16,6 +16,7 @@ py -m pip install matplotlib
 ```
 creat requirements.txt inside the project
 py -m pip freeze > requirements.txt
+py -m pip install -r requirements.txt
 ```
 
 ## Introduction
